@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .first {
+            position: relative;
+
+            height: 100vh;
+            background-color: darkcyan;
+        }
+
+        #page-1 {
+            position: absolute;
+            text-align: center;
+            top: -50%;
+            left: -50%;
+            
+            color: #fff;
+            font-size: 50px;
+
+            animation: first-animation 1s forwards ease-in;
+        }
+
+        #page-1 p {
+            margin-top: 35px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+
+        @keyframes first-animation {
+            to {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+        }
+
+
+        .second {
+            position: relative;
+
+            height: 100vh;
+            background-color: darkgoldenrod;
+        }
+
+        #page-2 {
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            color: #fff;
+            font-size: 50px;
+        }
+
+        #page-2 p {
+            margin-top: 35px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .btn-1 {
+            padding: 15px;
+            background-color: #fff;
+            border: 5px solid #fff;
+
+            transition: all .5s ease-in-out;
+        }
+        .btn-2 {
+            padding: 15px;
+            background-color: #fff;
+            color: darkgoldenrod;
+            border: 5px solid #fff;
+
+            transition: all .5s ease-in-out;
+        }
+        .btn-1:hover {
+            background-color: darkcyan;
+            color: #fff;
+            border: 5px solid #fff;
+        }
+        .btn-2:hover {
+            background-color: darkgoldenrod;
+            color: #fff;
+            border: 5px solid #fff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #page-1 a {
+            color: darkcyan;
+        }
+        #page-1 .btn-1 a:hover {
+            color: #fff;
+        }
+        #page-2 a {
+            color: darkgoldenrod;
+        }
+        #page-2 a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<section class="first">
+    <div id="page-1" >
+        <h1>Page 1</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, vero itaque tempore id consequuntur temporibus.</p>
+        <button class="btn-1"><a href="#page-2">Next Page</a></button>
+    </div>
+</section>    
+<section class="second">
+    <div id="page-2" >
+        <h1>Page 2</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, vero itaque tempore id consequuntur temporibus.</p>
+        <button class="btn-2"><a href="#page-1">Previous Page</a></button>
+        <button class="btn-2"><a href="#"></a>Next Page</button>
+    </div>
+</section>    
+</body>
+</html>
