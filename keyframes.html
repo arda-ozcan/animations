@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Keyframes</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .box {  
+            background-color: yellow;
+            width: 150px;
+            height: 150px;
+
+            position: relative;
+
+            top: 0;
+            left: 0;
+
+            animation: a1 5s forwards 1s ease-in;
+        }
+
+        h1 {
+            animation: a2 3s forwards 1s ease-in-out;
+            font-size: 50px;
+            color: azure;
+            background-color: black;
+            padding: 15px;
+            display: inline-block;
+
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes a1 {
+            /* from {
+                top: 0;
+                left: 0; 
+            }
+
+            to {
+                top: 300px;
+                left: 300px;
+            } */
+
+            25% {
+                top: 100px;
+                left: 0px;
+                background-color: aqua;
+            }
+            50% {
+                top: 100px;
+                left: 200px;
+                background-color: goldenrod;
+            }
+            75% {
+                top: 300px;
+                left: 200px;
+                background-color: blueviolet;
+            }
+            100% {
+                top: 300px;
+                left: 400px;
+                background-color: chocolate;
+            }
+        }
+
+        @keyframes a2 {
+            to {
+                top: 0;
+                left: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <div class="box"></div>
+</body>
+</html>
